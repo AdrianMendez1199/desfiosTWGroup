@@ -19,6 +19,7 @@ class Product extends Migration
             $table->integer('quantity');
             $table->float('price', 8,2);
             $table->unsignedBigInteger('invoice_id');
+            
             $table->foreign('invoice_id')
               ->references('id')
               ->on('invoices');
