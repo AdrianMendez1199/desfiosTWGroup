@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,11 @@ Route::get('/', function () {
 });
 
 
+// Desafio 1 y 3
 Route::get('/products/{id}', [ProductController::class, 'getTotalPriceByInvoice']);
 Route::get('/invoice', [ProductController::class, 'getInvoiceByPrice']);
 Route::get('/getAllProductNameByPrice', [ProductController::class, 'getAllProductNameByPrice']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
