@@ -19,4 +19,8 @@ class Product extends Model
         'price'
     ];
 
+    public function invoice() {
+        return $this->belongsTo(Invoice::class);
+    }
+
 }

@@ -19,4 +19,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/products/{id}', [ProductController::class, 'getTotalPrice']);
+Route::get('/products/{id}', [ProductController::class, 'getTotalPriceByInvoice']);
+Route::get('/invoice', [ProductController::class, 'getInvoiceByPrice']);
+Route::get('/getAllProductNameByPrice', [ProductController::class, 'getAllProductNameByPrice']);

@@ -17,5 +17,10 @@ class Invoice extends Model
         'date',
     ];
 
+    public function products() {
+        return $this->hasMany(Product::class);
+    }
 
+    // public function
 }
+
