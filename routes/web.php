@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
+App::setLocale('es');
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,10 @@ Route::get('/invoice', [ProductController::class, 'getInvoiceByPrice']);
 Route::get('/getAllProductNameByPrice', [ProductController::class, 'getAllProductNameByPrice']);
 
 Auth::routes();
+
+Route::middleware('auth')->group(function () {
+    Route::post('/task', [App\Http\Controllers\TasksController::class, 'createTask'])->name('createTask');
+    Route::get('/task', [App\Http\Controllers\TasksController::class, 'create'])->name('tasks');
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
