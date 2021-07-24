@@ -22,11 +22,18 @@ class ProductController extends Controller
    }
 
 
-//    Obtener todos los nombres de los productos cuyo valor final sea superior a $1.000.000 CLP.
+  //  Obtener todos los nombres de los productos cuyo valor final sea superior a $1.000.000 CLP.
    public function getAllProductNameByPrice(float $price = 1000000) {
             return Product::select('name')
             ->where('price', '>', $price)
             ->get();
+   }
+
+   public function createProduct(Request $request) {
+        $request->validate([
+            'title' => ['required', 'unique:posts', 'max:255'],
+            'body' => ['required'],
+        ]);
    }
     
 }

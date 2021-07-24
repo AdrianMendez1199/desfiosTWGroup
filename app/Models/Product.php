@@ -16,7 +16,8 @@ class Product extends Model
         'invoice_id',
         'name',
         'quantity',
-        'price'
+        'price',
+        'total'
     ];
 
     public function invoice() {
