@@ -51,5 +51,3 @@ Es un stack de laravel que está prediseñado con ciertas tareas que son ciertam
 ¿Qué permite "Livewire" a los programadores?
 Livewire es una libreria creada para la creación de interfaces dinamicas
 sin olvidarse de blade. Lo que permite a los desarrolladores es crear interfaces dinamicas utilizado php, sin necesidad de utilizar librerias como react o vuejs 
-
->>>>>>> desafio_2
