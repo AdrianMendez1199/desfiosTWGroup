@@ -55,7 +55,7 @@
                             @endif
                         @else
                         <li class="nav-item">
-                          <a class="nav-link" href="{{route('tasks')}}">
+                          <a class="nav-link" href="{{route('home')}}">
                              <i class="fa fa-tasks"></i>
                           </a>
                         </li>

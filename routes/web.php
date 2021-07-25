@@ -30,7 +30,8 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
     Route::post('/task', [App\Http\Controllers\TasksController::class, 'createTask'])->name('createTask');
-    Route::get('/task', [App\Http\Controllers\TasksController::class, 'create'])->name('tasks');
+    Route::get('/home', [App\Http\Controllers\TasksController::class, 'create'])->name('home');
+    Route::get('/logs/{taskId}', [App\Http\Controllers\LogController::class, 'getLogs'])->name('logs');
+    Route::post('/log/create', [App\Http\Controllers\LogController::class, 'create'])->name('log');
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -30,8 +30,13 @@ class TasksController extends Controller
                   ->withInput();
          }
 
-       $request->merge(['created_by' => Auth()->user()->id]);
- 
+       $hour = now()->format('H:i:s');
+       
+       $request->merge([
+           'created_by' => Auth()->user()->id,
+           'expiration_date' => "{$request->expiration_date} {$hour}"
+        ]);
+
        Task::create($request->all());
        return back()->with('success','Tarea creada satisfactoriamente.');
     }

@@ -17,7 +17,7 @@ class Tasks extends Migration
             $table->id();
             $table->text('description');
             $table->boolean('completed')->default(false);
-            $table->date('expiration_date');
+            $table->datetime('expiration_date');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
               ->references('id')
