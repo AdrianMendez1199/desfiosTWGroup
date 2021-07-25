@@ -45,9 +45,11 @@ php artisan serve ## este comando levantara la aplicación de laravel, por lo ge
 
 # Desafio 5
 
-¿Qué es "Laravel Jetstream"?
+**¿Qué es "Laravel Jetstream"?**
+
 Es un stack de laravel que está prediseñado con ciertas tareas que son ciertamente repetitivas en algunos proyectos, por eje: (Autenticación, registro, cambio de contraseña, confirmación de contraseña, two factor autenticación. etc) estas tareas que muchas veces son repetitivas, pero muy importantes para el sistema y que llevan mucho tiempo de desarrollo, son las que Jetstream ya tiene prediseñadas.
 
-¿Qué permite "Livewire" a los programadores?
+**¿Qué permite "Livewire" a los programadores?**
+
 Livewire es una libreria creada para la creación de interfaces dinamicas
 sin olvidarse de blade. Lo que permite a los desarrolladores es crear interfaces dinamicas utilizado php, sin necesidad de utilizar librerias como react o vuejs 
